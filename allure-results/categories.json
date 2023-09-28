@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Broken tests",
+    "matchedStatuses": ["broken"]
+  },
+
+  {
+    "name": "Unknown tests",
+    "matchedStatuses": ["unknown"]
+  },
+  {
+    "name": "Passed tests",
+    "matchedStatuses": ["passed"]
+  },
+  {
+    "name": "Element not found",
+    "traceRegex": ".*NoSuchElementError.*",
+    "matchedStatuses": [ "failed" ]
+  }
+]

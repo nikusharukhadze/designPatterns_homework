@@ -13,14 +13,14 @@ public class MoviePageSteps {
     MoviePage moviePage = new MoviePage();
 
 
-    @Step
+    @Step("Scroll And Click MoviePage")
     public MoviePageSteps chooseCavea(){
         JavascriptExecutor js = (JavascriptExecutor) WebDriverRunner.getWebDriver();;
         js.executeScript("window.scrollBy(0,400)");
         moviePage.caveaBtn.click();
         return this;
     }
-    @Step
+    @Step("Check Option is Cavea")
     public MoviePageSteps checkCavea(){
         JavascriptExecutor js = (JavascriptExecutor) WebDriverRunner.getWebDriver();
         for (int i = 0; i < moviePage.options.size(); i++) {
@@ -31,14 +31,14 @@ public class MoviePageSteps {
         return this;
     }
 
-    @Step
+    @Step("Last Date")
     public MoviePageSteps chooseDateOfMovie(){
         WebElement lastDateOfMovie = moviePage.dateOfMovie.get(moviePage.dateOfMovie.size() - 1);
         lastDateOfMovie.click();
         return this;
     }
 
-    @Step
+    @Step("Last Seance")
     public MoviePageSteps chooseSeance(){
         JavascriptExecutor js = (JavascriptExecutor) WebDriverRunner.getWebDriver();;
         WebElement lastCaveaSeance = moviePage.caveaSeances.get(moviePage.caveaSeances.size() - 1);
